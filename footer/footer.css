@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+img {
+  vertical-align: top;
+}
+
+/* 위 태그는 중복되면 지우세요 */
+
+footer {
+  font-family: "Yanolja", "Noto Sans KR", sans-serif;
+  width: 100%;
+  padding: 0 5.208vw;
+  font-size: .75vw;
+}
+#footerContainer {
+  width: 100%;
+  height: 22.5vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  border-top: 1px solid #000;
+}
+#footerContainer > img {
+  width: 12vw;
+  align-self: flex-start;
+  margin-top: 1.5vw;
+}
+#footerContainer #footerContact {
+  padding-top: 4vw;
+  padding-left: 0.938vw;
+}
+#footerContainer #footerContact li:first-child {
+  font-size: 1vw;
+  margin-bottom: 2vw;
+}
+#footerContainer #footerContact li:first-child span {
+  font-weight: 700;
+}
+#footerContainer #footerContact li {
+  padding: .3vw 0;
+}
+#footerContainer #footerContact li:nth-child(5) {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  margin-top: 2vw;
+}
+#footerContainer #followContainer #familySite {
+  position: relative;
+}
+#footerContainer #followContainer #familySite a {
+  height: 4vw;
+  border-bottom: 1px solid #000;
+  display: flex;
+  align-items: center;
+  padding-left: 1vw;
+}
+#footerContainer #followContainer #familySite a::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  padding-left: 1vw;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #FE3478;
+  transform: scaleX(0);
+  transform-origin: 0;
+  transition: .4s cubic-bezier(.49,.06,.1,.99);
+}
+#footerContainer #followContainer #familySite a::before {
+  content: "Family site";
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9999;
+  opacity: 0;
+  transition: .4s cubic-bezier(.49,.06,.1,.99);
+}
+#footerContainer #followContainer #familySite a:hover::after {
+  transform: scaleX(1);
+}
+#footerContainer #followContainer #familySite a:hover::before {
+  opacity: 1;
+  padding-left: .2vw;
+}
+#footerContainer #followContainer #familySite a:hover + img {
+  transform: translateY(-50%) scale(0);
+}
+#footerContainer #followContainer #familySite a:hover + img + img {
+  animation: familySiteBtn .4s .2s forwards;
+  animation-play-state: running;
+}
+@keyframes familySiteBtn {
+  100% {
+    opacity: 1;
+  }
+}
+#footerContainer #followContainer #familySite img {
+  position: absolute;
+  width: 0.8vw;
+  top: 50%;
+  right: 5%;
+  transition: .4s;
+  transform: translateY(-50%)
+}
+#footerContainer #followContainer #familySite img:first-child {
+  transform: translateY(-50%) scale(1);
+}
+#footerContainer #followContainer #familySite img:last-child {
+  opacity: 0;
+}
+
+#footerContainer #followContainer #followUs {
+  display: flex;
+  flex-flow: column;
+  padding: 3vw 0 0 1vw;
+}
+#footerContainer #followContainer #followUs ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+#footerContainer #followContainer ul li a {
+  margin-top: 1%;
+  padding: 13%;
+  width: 3vw;
+  height: 2.7vw;
+}
+#footerContainer #followContainer ul li img {
+  height: 100%;
+}
+#footerContainer #followContainer ul li:last-child {
+  flex: 1 0;
+}
+#footerContainer #followContainer #followUs ul li:last-child a {
+  margin-left: auto;
+  width: 5.3vw;
+  height: 4vw;
+  padding: 0;
+}
+
+
+
+
+
+main {
+  height: 400vh;
+}
