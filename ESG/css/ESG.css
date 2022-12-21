@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* 전역 style */
 a {
   text-decoration: none;
   color: inherit;
@@ -12,11 +13,33 @@ body {
   font-family: "Yanolja", "Noto Sans KR", sans-serif;
 }
 
-/* 위 태그는 중복되면 지우세요 */
-
+/* top 버튼 애니메이션 */
+@keyframes arrowFall {
+  0% {
+    top: -70px;
+  }
+  100% {
+    top: 80px;
+  }
+}
+/* top 버튼 나타나는 이벤트 */
+@keyframes arrowUp {
+  0% {
+    transform: translateY(20px);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* snb arrow mouseenter 이벤트 */
+@keyframes arrowMove {
+  100% {
+    transform: translateY(20px);
+  }
+}
 /* ----- top 버튼 ----- */
 .topBtn {
-  width: 50px;
+  width: 48px;
   height: 100px;
   border: 2px solid #fff;
   border-radius: 100px;
@@ -27,12 +50,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .5s cubic-bezier(.49,.06,.1,.99);
 }
 .topBtn span {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   overflow: hidden;
   position: relative;
+}
+.topBtn span a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .topBtn span #downArrow {
   width: 100%;
@@ -40,37 +71,34 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: 1s;
+  animation: arrowFall 2s infinite ease-in-out;
 }
 .topBtn span #downArrow {
   display: block;
 }
 .topBtn span #upArrow {
-  display: none;
+  cursor: auto;
+  opacity: 0;
+}
+.topBtn span #upArrow img {
+  width: 14px;
 }
 /* top버튼 classList */
 .topBtn.scrolled {
   border: 2px solid #000;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   display: flex;
   overflow: hidden;
 }
-.topBtn.scrolled span a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .topBtn.scrolled span #upArrow {
-  width: 15px;
+  width: 100%;
+  cursor: pointer;
+  animation: arrowUp .7s .3s forwards;
+  animation-play-state: running;
 }
 .topBtn.scrolled span #downArrow {
   display: none;
-}
-.topBtn.scrolled span #upArrow {
-  display: block;
 }
 
 /* ----- header ----- */
@@ -98,23 +126,48 @@ body {
   display: flex;
   align-items: center;
 }
-#bgBox .bgWrapper .snb li:first-child .downArrow {
-  width: 15px;
+#bgBox .bgWrapper .snb .downArrow {
+  align-items: center;
+  width: 20px;
   height: 15px;
   margin-left: 25px;
+  overflow: hidden;
+  position: relative;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+#bgBox .bgWrapper .snb .downArrow img {
+  position: absolute;
+  top: 0;
+  transform: translateY(-20px);
+}
+#bgBox .bgWrapper .snb .downArrow img:nth-child(1) {
+  transform: translateY(0);
+  transition: .5s;
+}
+#bgBox .bgWrapper .snb .downArrow.active img:nth-child(1) {
+  transform: translateY(20px);
+  transition: 1s;
+}
+#bgBox .bgWrapper .snb .downArrow.active img:nth-child(2) {
+  animation: arrowMove 1s linear infinite;
+}
+#bgBox .bgWrapper .snb .downArrow.active img:nth-child(3) {
+  animation: arrowMove 1s .5s linear infinite;
 }
 #bgBox .bgWrapper .snb li:nth-child(2) {
   color: transparent;
   -webkit-text-stroke: 0.5px #fff;
 }
-#bgBox .bgWrapper .snb li ~ li {
+#bgBox .bgWrapper .snb li ~ li a {
   opacity: 0;
   user-select: none;
+  transition: .3s cubic-bezier(.49, .06, .15, 1);
 }
-#bgBox .bgWrapper .snb.active li ~ li {
+#bgBox .bgWrapper .snb.active li ~ li a {
   opacity: 1;
-  user-select: all;
+  user-select: auto;
 }
 #bgBox .bgTxt {
   display: flex;

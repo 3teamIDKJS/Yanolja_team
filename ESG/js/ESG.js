@@ -1,14 +1,29 @@
-// top버튼
 const topBtn = document.querySelector(".topBtn");
-const btnArrow = document.querySelector(".topBtn #downArrow");
+const bgBox = document.querySelector(".bgBox");
 
-btnArrow.style.top = `-${btnArrow.offsetHeight}px`;
-const arrowFall = () => {
-  btnArrow.style.top = `${btnArrow.offsetHeight * 2}px`
-};
-
-setInterval(arrowFall, 2000);
-
-function changeBtn() {}
-
+// top버튼 체인지
+function changeBtn() {
+  if (scrollY > 190) {
+    topBtn.classList.add("scrolled");
+  } else {
+    topBtn.classList.remove("scrolled");
+  }
+}
 addEventListener("scroll", changeBtn);
+
+// snb JavaScript
+const snb = document.querySelector(".snb");
+const snbLists = document.querySelectorAll(".snb li");
+const snbArrow = document.querySelector(".snb .downArrow");
+
+snbLists[0].addEventListener("mouseenter", (e) => {
+  snbArrow.classList.add("active");
+  snbLists[0].addEventListener("mouseleave", (e) => {
+    snbArrow.classList.remove("active");
+  });
+});
+
+snbLists[0].addEventListener("click", (e) => {
+  e.preventDefault();
+  snb.classList.toggle("active");
+});
