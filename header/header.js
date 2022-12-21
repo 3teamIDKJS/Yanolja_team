@@ -1,9 +1,9 @@
 const menu = document.querySelector(".container");
 const gnb = document.querySelector("#gnb");
 const lis = document.querySelectorAll("#gnb li");
-const subMenu = document.querySelector(".subMenu");
 const mission = document.querySelector("#brandMission");
 
+/* menu */
 addEventListener("scroll", scrolled);
 
 let prevscroll = scrollY;
@@ -30,11 +30,13 @@ function scrolled() {
     menu.style.backgroundColor = "transparent";
   }
 }
-menu.addEventListener("mouseenter", () => {
+menu.addEventListener("mouseenter", (e) => {
   menu.classList.add("showMenu");
   gnb.style.overflow = "visible";
   menu.style.backgroundColor = "#fff";
   menu.addEventListener("mouseleave", () => {
     menu.classList.remove("showMenu");
+    gnb.style.overflow = "hidden";
+    menu.style.backgroundColor = "transparent";
   });
 });
