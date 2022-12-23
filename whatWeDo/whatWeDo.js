@@ -23,7 +23,7 @@ const goUp = document.querySelector("#goUp");
 const bgBox = document.querySelector("#bgBox");
 
 // 원효과 
-const pageLoad = () => {
+const pageLoad = () => { 
       
     const clipImg = document.querySelector(".clipImg");
     const bgMask = document.querySelector(".bgMask");
