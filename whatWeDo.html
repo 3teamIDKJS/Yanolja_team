@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css테스트</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+    <!-- 초기화 css -->
+    <link rel="stylesheet" href="./common/minireset.min.css">
+    <!-- font css -->
+    <link rel="stylesheet" href="./font/font.css">
+    <!-- what we do css -->
+    <link rel="stylesheet" href="./css테스트.css">
+    <!-- what we do js -->
+    <script defer src="./whatWeDo.js"></script>
+</head>
+<body>
+  <div id="bgContainer">
+    <!-- bgContainer : 모든 콘텐츠 담은 컨테이너 -->
+    <div id="bgBox">
+      <!-- bgBox : background 이미지만 적용된 div. -->
+    </div>
+    <div class="bgMask">
+      <!-- bgMask : 원에서 커지는 마스크 용도. 필수 -->
+      <div class="clipImg"></div>
+      <!-- clipImg : 마스크 내부 background로 이미지 적용 -->
+    </div>
+    <!-- 메뉴 -->
+    <div class="container showMenu clearfix">
+      <header>
+        <h1>
+          <a href="#"><img src="./images/logo.svg" alt="야놀자_로고" /></a>
+        </h1>
+        <ul id="gnb">
+          <li><a href="#">About</a></li>
+          <li>
+            <a href="#">what we do</a>
+            <ul class="subMenu">
+              <li><a href="#">Platform business</a></li>
+              <li><a href="#">Hospitality solution</a></li>
+              <li><a href="#">Space business</a></li>
+              <li><a href="#">Partnership</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Tech story</a></li>
+          <li>
+            <a href="#">Newsroom <img src="./images/arrow_outlink.svg" alt="메뉴_화살표"/></a>
+          </li>
+          <li>
+            <a href="#">IR</a>
+            <ul class="subMenu">
+              <li><a href="#">공시</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">ESG</a>
+            <ul class="subMenu">
+              <li><a href="#">ESG vision</a></li>
+              <li><a href="#">ESG commitments</a></li>
+              <li><a href="#">ESG news</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"
+              >Careers <img src="./images/arrow_outlink.svg" alt="메뉴_화살표"/></a>
+          </li>
+          <li id="menuLang">
+            <a href="#" id="langKr">KOR</a><a href="#" id="langEng">ENG</a>
+          </li>
+        </ul>
+      </header>
+    </div>
+
+    <!-- content 1 -->
+    <div id="content1">
+        <div class="content1Scroll">
+            <ul class="content1Menu">
+                <li>
+                    <a href="#">Platform business</a>
+                        <span class="arrowDown">
+                            <img src="./images/content1_menu.svg" alt="메뉴버튼">
+                            <img src="./images/content1_menu.svg" alt="메뉴버튼">
+                            <img src="./images/content1_menu.svg" alt="메뉴버튼">
+                        </span>
+                </li>
+                <ul class="content1SubMenu">
+                    <li>Platform business</li>
+                    <li><a href="#">Hostpitality solution</a></li>
+                    <li><a href="#">Space business</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </ul>
+            <ul class="content1txtBox">
+                <li>
+                    <h2>글로벌 여가 슈퍼앱</h2>
+                    <h3>야놀자는 국내외 숙박부터 레저, 교통, 레스토랑, 쇼핑까지 여가와 관련된 모든 서비스를 제공하는 글로벌 여가 Super app입니다.</h3>
+                </li>
+            </ul>
+            <div class="content1txtBox2">
+                <ul>
+                    <li>
+                        <p>uzakrota travel awards 2020</p>
+                        <h2>세계 최고의 여행 앱</h2>
+                    </li>
+                    <li>
+                        <p>누적 앱 다운로드 수</p>
+                        <h2 class="count1">0</h2>
+                    </li>
+                    <li>
+                        <p>apple app store</p>
+                        <h2>2018년을 빛낸 최고작</h2>
+                    </li>
+                    <li>
+                        <p>2019 max summit award</p>
+                        <h2>투어·호텔 부문 수상</h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- content 2 -->
+    <div id="content2">
+        <p class="txt txt1">now</p>
+        <p class="txt txt2 count2">19,000,000</p>
+        <p class="txt txt3">전체 플랫폼 누적가입자</p>
+        <p class="txt txt4">members</p>
+    </div>
+
+    <!-- content 3 -->
+    <div id="content3">
+        <div class="sticky_box">
+            <ul class="content3txtBox">
+              <li class="timeTxt content3txtBox1">
+                <h2>여가를 위한 모든<br>서비스를 제공합니다.</h2>
+                <p>전 세계 100만 개 이상의 숙소와<br>모든 종류의 레저,<br>항공·철도·렌터카 등 교통 서비스를<br>예약하고 즐길 수 있습니다.</p>
+              </li>
+              <li class="timeTxt content3txtBox2">
+                <h2>국내 최다<br>여가 인벤토리를 보유한<br>글로벌 데이터 플랫폼입니다.</h2>
+                <p>데이터 기반의 마케팅 활동을 통해<br>고객 만족도를 제고하고,<br>국내 최대 규모의 데이터를 활용해<br>여가 트렌드를 예측하고 선도합니다.</p>
+              </li>
+              <li class="timeTxt content3txtBox3">
+                <h2>특별한 여가 경험을 위한<br>양질의 콘텐츠를 만듭니다.</h2>
+                <p>여가 콘텐츠를 개발해<br>여가산업의 발전과<br>여행시장 활성화에 기여합니다.</p>
+                <ul class="content3SNS">
+                  <li>
+                    <a href="#"><img src="./images/content3_fb.svg" alt="페이스북" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/content3_youtube.svg" alt="유튜브" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/content3_insta.svg" alt="인스타" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/content3_npost.svg" alt="네이버스팟" /></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="content3Scroll">
+                <li>
+                    <img src="./images/scroll_1.jpg" alt="스크롤이미지1" class="content3Img1">
+                </li>
+                <li>
+                    <img src="./images/scroll_2.jpg" alt="스크롤이미지2" class="content3Img2">
+                </li>
+                <li>
+                    <img src="./images/scroll_3.jpg" alt="스크롤이미지3" class="content3Img3">
+                </li>
+                <li class="content3txt">Global data platform</li>
+                <li>
+                    <img src="./images/scroll_4.jpg" alt="스크롤이미지4" class="content3Img4">
+                </li>
+                <li>
+                    <img src="./images/scroll_5.jpg" alt="스크롤이미지5" class="content3Img5">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- content 4 -->
+    <div id="content4">
+      <div class="platform">
+        <div class="platformIcon">
+          <img src="./images/content4_platform1.svg" alt="글로벌여가플랫폼">
+        </div>
+        <div class="platformTxt">
+          <h3>글로벌 여가 플랫폼</h3>
+          <p>야놀자가 제공하는 국내외 숙박, 레저, 교통 등<br>여가를 위한 모든 서비스를 경험해보세요.</p>
+        </div>
+        <div class="platformDownload">
+          <div class="download">
+            <a href="#">
+              <img src="./images/content4_google.svg" alt="플레이스토어">
+            </a>
+            <div class="downIcon">
+              <img src="./images/content4_download.svg" alt="다운로드">
+            </div>
+          </div>
+          <div class="download">
+            <a href="#">
+              <img src="./images/content4_apple.svg" alt="앱스토어">
+            </a>
+            <div class="downIcon">
+              <img src="./images/content4_download.svg" alt="다운로드">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="platform">
+        <div class="platformIcon">
+          <img src="./images/content4_platform2.svg" alt="글로벌여가플랫폼">
+        </div>
+        <div class="platformTxt">
+          <h3>프리미엄 종합<br>여가 예약 플랫폼</h3>
+          <p>데일리호텔이 제공하는 예약 서비스를 통해<br>잊지 못할 하루를 만들어보세요.</p>
+        </div>
+        <div class="platformDownload">
+          <div class="download">
+            <a href="#">
+              <img src="./images/content4_google.svg" alt="플레이스토어">
+            </a>
+            <div class="downIcon">
+              <img src="./images/content4_download.svg" alt="다운로드">
+            </div>
+          </div>
+          <div class="download">
+            <a href="#">
+              <img src="./images/content4_apple.svg" alt="앱스토어">
+            </a>
+            <div class="downIcon">
+              <img src="./images/content4_download.svg" alt="다운로드">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- topBtn -->
+    <div class="topBtn">
+      <span>
+        <img src="./images/whatwedo_scrolldown.svg" alt="아래 화살표" id="downArrow">
+        <a href="#" id="upArrow">
+          <img src="./images/whatwedo_scrollup.svg" alt="위 화살표">
+        </a>
+      </span>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div id="footerContainer">
+          <img src="./images/footer_logo.svg" alt="야놀자 로고" />
+          <ul id="footerContact">
+            <li>
+              <a href="#">Y-Siren <span>(윤리경영/제보)</span></a>
+            </li>
+            <li><a href="#">TEL 1644-1346</a></li>
+            <li>FAX 02-548-1886</li>
+            <li><a href="#">contact@yanolja.com</a></li>
+            <li>
+              <a href="#">서울특별시 강남구 테헤란로 108길 42 (대치동 1003)</a>
+            </li>
+            <li><a href="#">&copy; Yanolja Co., Ltd.</a></li>
+          </ul>
+          <div id="followContainer">
+            <div id="familySite">
+              <a href="#">Family site</a>
+              <img src="./images/footer_plus_blk.svg" alt="더하기 흰색">
+              <img src="./images/footer_plus_w.svg" alt="더하기 흰색">
+            </div>
+            <ul id="followUs">
+              <li>Follow us</li>
+              <li>
+                <ul>
+                  <li>
+                    <a href="#"><img src="./images/footer_linkedin.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/footer_fb.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/footer_insta.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/footer_npost.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/footer_youtube.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/footer_twitter.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#" id="award2022"><img src="./images/footer_design_award_2022.svg" alt=""/></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+  </div>
+</body>
+</html>
