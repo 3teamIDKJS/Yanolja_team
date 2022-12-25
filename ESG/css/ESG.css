@@ -382,7 +382,7 @@ header h1 img {
 }
 .mainArticle .followContainer .imgBox .imgMask {
   width: 100%;
-
+  position: relative;
   clip-path: inset(35% 32% 35% 32% round 300px);
   transition: 1.2s ease-out;
 }

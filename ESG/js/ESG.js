@@ -172,25 +172,47 @@ const expandCircle = () => {};
 
 addEventListener("scroll", expandCircle);
 
-
 // svg 제어
 
 // 나무 일러스트 애니메이션 제어
 
 window.onload = function () {
-  const svg = document.getElementById("treeSvg");
-  const svgDoc = svg.contentDocument;
-  const frontTree = svgDoc.getElementById("frontTree");
+  // article1 js
+  const treeSvg = document.getElementById("treeSvg");
+  const treeSvgDoc = treeSvg.contentDocument;
+  const frontTree = treeSvgDoc.getElementById("frontTree");
+
   addEventListener("scroll", () => {
     const topLine = articles[0].offsetTop - document.documentElement.clientHeight;
-    const bottomLine = articles[0].offsetTop + document.documentElement.clientHeight;
     if (scrollY > topLine + 700) {
       frontTree.classList.add("svgControl");
     }
-    scrollY < topLine || scrollY > bottomLine
-    ? frontTree.classList.remove("svgControl")
-    : false
+    scrollY < topLine ? frontTree.classList.remove("svgControl") : false;
+  });
+
+  // article2 js
+  const theySvg = document.getElementById("people");
+  const theySvgDoc = theySvg.contentDocument;
+  const people = theySvgDoc.getElementById("peoples");
+
+  addEventListener("scroll", () => {
+    const topLine = articles[1].offsetTop - document.documentElement.clientHeight;
+    if (scrollY > topLine + 400) {
+      people.classList.add("svgControl");
+    }
+    scrollY < topLine ? people.classList.remove("svgControl") : false;
+  });
+
+  // article3 js
+  const talkSvg = document.getElementById("talking");
+  const talkSvgDoc = talkSvg.contentDocument;
+  const talking = talkSvgDoc.getElementById("article3");
+
+  addEventListener("scroll", () => {
+    const topLine = articles[2].offsetTop - document.documentElement.clientHeight;
+    if (scrollY > topLine + 700) {
+      talking.classList.add("svgControl");
+    }
+    scrollY < topLine ? talking.classList.remove("svgControl") : false;
   });
 };
-
-
