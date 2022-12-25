@@ -5,7 +5,69 @@ const lis = document.querySelectorAll("#gnb li");
 const mission = document.querySelector("#brandMission");
 const btnTop = document.querySelector(".buttonTop");
 const clientHt = document.documentElement.clientHeight;
+/* 스크롤 부드럽게 */
+// class Scrooth {
+//   constructor({
+//     element = window,
+//     strength = 10,
+//     acceleration = 1.2,
+//     deceleration = 0.975,
+//   } = {}) {
+//     this.element = element;
+//     this.distance = strength;
+//     this.acceleration = acceleration;
+//     this.deceleration = deceleration;
+//     this.running = false;
 
+//     this.element.addEventListener("wheel", this.scrollHandler.bind(this), {
+//       passive: false,
+//     });
+//     this.element.addEventListener("mousewheel", this.scrollHandler.bind(this), {
+//       passive: false,
+//     });
+//     this.scroll = this.scroll.bind(this);
+//   }
+
+//   scrollHandler(e) {
+//     e.preventDefault();
+
+//     if (!this.running) {
+//       this.top = this.element.pageYOffset || this.element.scrollTop || 0;
+//       this.running = true;
+//       this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
+//       this.isDistanceAsc = true;
+//       this.scroll();
+//     } else {
+//       this.isDistanceAsc = false;
+//       this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
+//     }
+//   }
+
+//   scroll() {
+//     if (this.running) {
+//       this.currentDistance *=
+//         this.isDistanceAsc === true ? this.acceleration : this.deceleration;
+//       Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false
+//         ? (this.running = false)
+//         : 1;
+//       Math.abs(this.currentDistance) >= Math.abs(this.distance)
+//         ? (this.isDistanceAsc = false)
+//         : 1;
+
+//       this.top += this.currentDistance;
+//       this.element.scrollTo(0, this.top);
+
+//       requestAnimationFrame(this.scroll);
+//     }
+//   }
+// }
+
+// const scroll = new Scrooth({
+//   element: window,
+//   strength: 20,
+//   acceleration: 1.5,
+//   deceleration: 0.975,
+// });
 /* menu */
 
 addEventListener("scroll", scrolled);
@@ -60,13 +122,34 @@ menu.addEventListener("mouseenter", (e) => {
   });
 });
 /* btn Top */
-const buttonTop = document.querySelector("#circleBottom");
-buttonTop.addEventListener("click", () => {
+
+// top버튼
+// changeBtn 함수에 scrollY > 190 조건은 페이지 최상단 이미지 높이 맞춰서 수정하세요
+
+const topBtn = document.querySelector(".topBtn");
+
+function changeBtn() {
+  if (scrollY > 190) {
+    topBtn.classList.add("scrolled");
+  } else {
+    topBtn.classList.remove("scrolled");
+  }
+}
+addEventListener("scroll", changeBtn);
+topBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   scrollTo({
     top: 0,
     behavior: "smooth",
   });
 });
+// const buttonTop = document.querySelector("#circleBottom");
+// buttonTop.addEventListener("click", () => {
+//   scrollTo({
+//     top: 0,
+//     behavior: "smooth",
+//   });
+// });
 /* banner */
 const pageLoad = () => {
   const clipImg = document.querySelector(".clipImg");
@@ -104,8 +187,9 @@ function textScroll() {
   const brandTxt = document.querySelectorAll(".brandTxt");
   let visionTp = Brandvision.offsetTop - 300;
   bgTxt1.style.transform = `translateX(-${scrollY - 500}px)`;
+
   let bg2scroll = scrollY - visionTp;
-  if (visionTp - 100 < scrollY) {
+  if (visionTp - 300 < scrollY) {
     bgTxt2.style.transform = `translateX(-${bg2scroll}px)`;
   }
 

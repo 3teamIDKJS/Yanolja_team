@@ -6,11 +6,11 @@
     <title>Global R.E.S.T. Platform</title>
     <link rel="stylesheet" href="../common/minireset.min.css" />
 
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../font/font.css" />
     <link rel="stylesheet" href="../common/ya_About.css" />
 
-    <script defer src="./ya_About.js"></script>
+    <script defer src="../js/ya_About.js"></script>
     <style></style>
   </head>
   <body>
@@ -19,7 +19,7 @@
       <header>
         <h1>
           <a href="./index.html"
-            ><img src="../img/logo.svg" alt="야놀자_로고"
+            ><img src="../images/logo.svg" alt="야놀자_로고"
           /></a>
         </h1>
         <ul id="gnb">
@@ -36,7 +36,7 @@
           <li><a href="#">Tech story</a></li>
           <li>
             <a href="#"
-              >Newsroom <img src="../img/arrow_outlink.svg" alt="메뉴_화살표"
+              >Newsroom <img src="../images/arrow_outlink.svg" alt="메뉴_화살표"
             /></a>
           </li>
           <li>
@@ -55,7 +55,7 @@
           </li>
           <li>
             <a href="#"
-              >Careers <img src="../img/arrow_outlink.svg" alt="메뉴_화살표"
+              >Careers <img src="../images/arrow_outlink.svg" alt="메뉴_화살표"
             /></a>
           </li>
           <li id="menuLang">
@@ -65,14 +65,27 @@
       </header>
     </div>
     <!-- button_top -->
-    <div class="buttonTop">
+    <!-- topBtn -->
+    <div class="topBtn">
+      <span>
+        <img
+          src="../images/arrow_scroll_down_w.svg"
+          alt="아래 화살표"
+          id="downArrow"
+        />
+        <a href="#" id="upArrow">
+          <img src="../images/arrow_scroll_up.svg" alt="위 화살표" />
+        </a>
+      </span>
+    </div>
+    <!-- <div class="buttonTop">
       <div id="circleTop">
         <span></span>
       </div>
       <div id="circleArrow">
         <div id="circleArrowAni">
           <img
-            src="../img/arrow_scroll_down_w.svg"
+            src="./img/arrow_scroll_down_w.svg"
             alt="화살표 아래로"
             id="arrowDown"
           />
@@ -81,10 +94,10 @@
 
       <div id="circleBottom">
         <span>
-          <img src="../img/arrow_scroll_up.svg" alt="화살표 위로" id="arrowUp"
+          <img src="./img/arrow_scroll_up.svg" alt="화살표 위로" id="arrowUp"
         /></span>
       </div>
-    </div>
+    </div> -->
     <!-- banner -->
     <section>
       <div id="banner">
@@ -131,7 +144,7 @@
         <div class="sectionCon">
           <div class="sectionList">
             <div class="sectionImg">
-              <img src="../img/sec1_1.jpg" alt="tech_img" />
+              <img src="../images/sec1_1.jpg" alt="tech_img" />
             </div>
             <span class="subTitle">누구나 마음 편히 놀 수 있게</span>
             <div class="sectionCover">
@@ -156,7 +169,7 @@
         <div class="sectionCon">
           <div class="sectionList">
             <div class="sectionImg">
-              <img src="../img/sec1_2.jpg" alt="info_img" />
+              <img src="../images/sec1_2.jpg" alt="info_img" />
             </div>
             <span class="subTitle">누구나 마음 편히 놀 수 있게</span>
             <div class="sectionCover">
@@ -182,7 +195,7 @@
         <div class="sectionCon">
           <div class="sectionList">
             <div class="sectionImg">
-              <img src="../img/sec1_3.jpg" alt="space_img" />
+              <img src="../images/sec1_3.jpg" alt="space_img" />
             </div>
             <span class="subTitle">누구나 마음 편히 놀 수 있게</span>
             <div class="sectionCover">
@@ -215,7 +228,7 @@
       <div class="visionCon">
         <div class="visionList">
           <div class="vision">
-            <img src="../img/sec2_1.jpg" />
+            <img src="../images/sec2_1.jpg" />
             <div class="visionGood">
               <div class="visionGoodTxt">
                 <span>여가를 위한 모든 서비스를</span>
@@ -226,7 +239,7 @@
             </div>
           </div>
           <div class="vision">
-            <img src="../img/sec2_2.jpg" />
+            <img src="../images/sec2_2.jpg" />
 
             <div class="visionGood">
               <div class="visionGoodTxt">
@@ -238,7 +251,7 @@
             </div>
           </div>
           <div class="vision">
-            <img src="../img/sec2_3.jpg" />
+            <img src="../images/sec2_3.jpg" />
             <div class="visionGood">
               <div class="visionGoodTxt">
                 <span>전 세계 시장 공략하는</span>
@@ -249,7 +262,7 @@
             </div>
           </div>
           <div class="vision">
-            <img src="../img/sec2_4.jpg" />
+            <img src="../images/sec2_4.jpg" />
             <span>
               <div class="visionGood">
                 <div class="visionGoodTxt">
@@ -568,13 +581,13 @@
             <div class="ciDownList">
               <a>C.I. download</a>
               <div class="downBox">
-                <img src="../img/arrow_down.svg" alt="download" />
+                <img src="../images/arrow_down.svg" alt="download" />
               </div>
             </div>
             <div class="ciDownList">
               <a>Yanolja app download</a>
               <div class="downBox">
-                <img src="../img/arrow_down.svg" alt="download" />
+                <img src="../images/arrow_down.svg" alt="download" />
               </div>
             </div>
           </div>
@@ -583,7 +596,7 @@
     </section>
     <footer>
       <div id="footerContainer">
-        <img src="../img/footer_logo.svg" alt="야놀자 로고" />
+        <img src="../images/footer_logo.svg" alt="야놀자 로고" />
         <ul id="footerContact">
           <li>
             <a href="#">Y-Siren <span>(윤리경영/제보)</span></a>
@@ -599,36 +612,34 @@
         <div id="followContainer">
           <div id="familySite">
             <a href="#">Family site</a>
-            <img src="../img/footer_plus_blk.svg" alt="더하기 흰색" />
-            <img src="../img/footer_plus_w.svg" alt="더하기 흰색" />
+            <img src="../images/footer_plus_blk.svg" alt="더하기 흰색" />
+            <img src="../images/footer_plus_w.svg" alt="더하기 흰색" />
           </div>
           <ul id="followUs">
             <li>Follow us</li>
             <li>
               <ul>
                 <li>
-                  <a href="#"
-                    ><img src="../img/footer_linkedin.svg" alt=""
-                  /></a>
+                  <a href="#"><img src="../images/footer_linkedin.svg" alt="" /></a>
                 </li>
                 <li>
-                  <a href="#"><img src="../img/footer_fb.svg" alt="" /></a>
+                  <a href="#"><img src="../images/footer_fb.svg" alt="" /></a>
                 </li>
                 <li>
-                  <a href="#"><img src="../img/footer_insta.svg" alt="" /></a>
+                  <a href="#"><img src="../images/footer_insta.svg" alt="" /></a>
                 </li>
                 <li>
-                  <a href="#"><img src="../img/footer_npost.svg" alt="" /></a>
+                  <a href="#"><img src="../images/footer_npost.svg" alt="" /></a>
                 </li>
                 <li>
-                  <a href="#"><img src="../img/footer_youtube.svg" alt="" /></a>
+                  <a href="#"><img src="../images/footer_youtube.svg" alt="" /></a>
                 </li>
                 <li>
-                  <a href="#"><img src="../img/footer_twitter.svg" alt="" /></a>
+                  <a href="#"><img src="../images/footer_twitter.svg" alt="" /></a>
                 </li>
                 <li>
                   <a href="#" id="award2022"
-                    ><img src="../img/footer_design_award_2022.svg" alt=""
+                    ><img src="../images/footer_design_award_2022.svg" alt=""
                   /></a>
                 </li>
               </ul>
