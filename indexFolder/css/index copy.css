@@ -1,0 +1,309 @@
+@charset "utf-8";
+/* header */
+
+body {overflow-x: hidden;}
+header .container {
+  width: 100%;
+  height: 92px;
+  padding: 0 100px;
+  position: fixed;
+  transition: 0.25s;
+  z-index: 9999;
+}
+
+section {font-family: "Yanolja",'Noto Sans KR', sans-serif; height: 100vh; justify-content: center; align-items: center;}
+span {display: block;}
+em {font-style: normal;}
+a {text-decoration: none; color: inherit;}
+
+/* fullScreen */
+.fullScreen {position: relative;}
+.fullScreen video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+.fullScreen .fullScreenText {
+  display: flex;
+  position: absolute;
+  width: 90%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 3.5vw;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+.fullScreen .fullScreenText .emtpy {
+  width: 70%;
+  height: 100%;
+} 
+/* container section1,2 안 txtBox */
+.container .txtBox em {font-size: 0.9vw;}
+.container .txtBox h1 {font-size: 3.646vw; font-weight: 700;}
+
+.container .txtBox p {
+  font-size: 1.354vw;
+}
+.container .txtBox p em {
+  font-weight: 700;
+  font-size: 1.354vw;}
+
+/* **** container sec1,2 hovBox **** */
+.container .txtBox .hovBox {
+  margin-top: 2.5vw;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  position: relative;
+  width: 21vw;
+  height: 4.1vw;
+  overflow: hidden;
+}
+.container .txtBox .hovBox img {
+  align-items: center;
+  height: 4.1vw;
+  width: 3vw;
+  margin-left: 16vw;
+  transition-duration: .3s;
+}
+.container .txtBox .hovBox a {
+  position: absolute;
+  z-index: 999;
+  line-height: 4.1vw;
+  font-size: 1vw;
+  text-indent: 1vw;
+  transition-duration: .3s;
+}
+.container .txtBox .hovBox span {
+  position: absolute;
+  width: 1%; height: 100%;
+  transition-property: all;
+  transition-duration: .3s;
+}
+.container .txtBox .hovBox span img {
+  align-items: center;
+  height: 4.1vw;
+  width: 0;
+  margin-left: 16vw;
+}
+.container .txtBox .hovBox:hover a {
+  color: #FFFFFF;
+  transform: translateX(.6vw);
+}
+.container .txtBox .hovBox:hover span {
+  background-color: #FF3478;
+  width: 100%;
+}
+.container .txtBox .hovBox:hover span img {
+  width: 3vw;
+}
+.container .txtBox .hovBox:hover .gone {
+  transform:translateX(10vw);
+}
+
+
+/* **** sec1 **** */
+.sec1 {display: flex; justify-content: center; align-items: center;}
+.sec1 .container {
+  display: flex;
+  justify-content: space-between;
+  width: 89%;
+}
+.sec1 .container .sec1Txt {
+  width: 30vw;
+}
+/* logoVidoeWrapper */
+.sec1 .container .logoVidoeWrapper {
+  width: 30vw;
+  position: relative;
+  margin-right: 5vw;
+}
+.sec1 .container .logoVidoeWrapper video {
+  border-radius: 50px; /* 임시 */
+}
+.sec1 .container .logoVidoeWrapper .whLogo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+/* **** sec2 **** */
+.sec2 {
+  color: #FFFFFF;
+  background: url(../img/index_Bg_phone.jpg) no-repeat 50% / cover;
+  height: 100vh;
+}
+.container .sec2Txt.txtBox .hovBox {  border:1px solid #FFFFFF;}
+.sec2 .container {
+  display: flex;
+  align-items: center;
+  width: 89%;
+  height: 100%;
+  margin: 0 auto;
+}
+.sec2 .container .sec2Txt {
+  width: 35vw;
+}
+/* **** sec3 **** */
+/* -----js----- */
+.sec3 {
+  width: 89%;
+  transform: translate(5.5%);
+  position: relative;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  /* width: 50vw; */
+  /* height: 100vh; */
+  background-color: aqua;
+}
+.ulHo {
+  margin-top: 20vh;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  /* background-color: #ddd; */
+  justify-content: space-around;
+  width: 300vw; 
+}
+.sec3 img {
+  display: flex;
+  /* align-self: center; */
+}
+.ulHo img:nth-of-type(1) {
+  width: 50vw;
+  margin: 0 5vw 0 20vw ;
+  align-self: flex-start;  
+}
+.sec3 img:nth-of-type(2) {
+  border-radius: 50%;
+  width: 30vw;
+  align-self: flex-end;
+}
+.sec3 img:nth-of-type(3) {
+  width: 30vw; height: 40vw;
+  align-self: flex-start;
+}
+.sec3 img:nth-of-type(4) {
+  align-self: flex-end;
+  width: 50vw;
+}
+.sec3 img:nth-of-type(5) {
+  border-radius: 50%;
+  width: 30vw;
+  align-self: flex-start;
+}
+/* ----- txt ----- */
+.sec3 .abs {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  /* height: 100vh; */
+}
+.sec3 .container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  left: 0; top: 0;
+  z-index: 99999;
+
+}
+/* **** sec4 **** */
+
+.sec4 {display: flex; justify-content: center;}
+.sec4 {
+  position: relative; 
+  height: 100vh;
+}
+.sec4 .container {
+  position: absolute;
+  top: 110vh;
+  width: 89%;
+  display: flex;
+  justify-content: space-between;
+}
+.sec4 .container .sec4Txt h1 {
+  font-size: 2.81vw;
+}
+.sec4 .container .sec4Txt p {
+  font-size: 1.35vw;
+  font-weight: 700;
+  margin: .1vw 0 2.5vw 0 ;
+}
+.sec4 .container .hovBox {
+  margin-top: 2.5vw;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  position: relative;
+  width: 55%;
+  height: 4.1vw;
+  overflow: hidden;
+}
+.sec4 .container .hovBox a {
+  position: absolute;
+  z-index: 999;
+  line-height: 4.1vw;
+  font-size: 1vw;
+  text-indent: 1vw;
+  transition-duration: .3s;
+}
+.sec4 .container .hovBox span {
+  position: absolute;
+  width: 1%; height: 100%;
+  transition-property: all;
+  transition-duration: .3s;
+}
+.sec4 .container .hovBox img {
+  align-items: center;
+  height: 4.1vw;
+  width: 3vw;
+  margin-left: 15vw;
+  transition-duration: .4s;
+}
+.sec4 .container .hovBox:hover .aWhite {width: 3vw;}
+.sec4 .container .hovBox:hover .bOut {transform: translateX(10vw);} 
+.sec4 .container .hovBox .diagonal {
+  width: .6vw;
+  margin-left: 18vw;
+}
+.sec4 .container .hovBox .aWhite { width: 0%;}
+.sec4 .container .hovBox:hover a {
+  color: #FFFFFF;
+  transform: translateX(.6vw);
+}
+.sec4 .container .hovBox:hover span {
+  background-color: #FF3478;
+  width: 100%;
+}
+.sec4 .container .hovBox:hover .diagonal {width: .6vw;}
+.sec4 .container .imgBox {
+  margin-top: 2vw;
+  width: 38vw; 
+  height: 38vw;
+  border-radius: 50%;
+  margin-bottom: 40vh;
+  overflow: hidden;
+}
+.sec4 .container img {
+  width: 100%;
+  transition: .8s;
+  cursor: pointer;
+}
+.sec4 .container img:hover {
+  transform: scale(1.1);
+}
+/* ----- footer ----- */
+footer {
+  position: relative;}
+footer #footerContainer {
+  position: absolute;
+  width: 89%;
+  left: 5.5%;
+  top: 140vh;
+}
