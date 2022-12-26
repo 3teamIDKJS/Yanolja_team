@@ -2,6 +2,32 @@
 :root {
   --smooth: cubic-bezier(0.49, 0.06, 0.1, 0.99);
 }
+/* introLogo */
+.introLogo {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+}
+.introLogo p {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 8em;
+  color: #ff3478;
+  user-select: none;
+  letter-spacing: 50px;
+  transition: 1s var(--smooth);
+}
+.introLogo.play p {
+  letter-spacing: 1px;
+  opacity: 1;
+}
+
 
 /* header */
 body {overflow-x: hidden;}
@@ -113,8 +139,8 @@ a {text-decoration: none; color: inherit;   display: block;}
   position: relative;
   width: 100%;
   height: 100vh;
-  clip-path: inset(30% 40% 30% 40% round 300px);
-  transition: 1s;
+  clip-path: inset(50% 50% 50% 50% round 300px);
+  transition: 1.5s;
 }
 
 /* clipImg >
@@ -193,9 +219,9 @@ a {text-decoration: none; color: inherit;   display: block;}
     transform: translateY(0);
   }
 }
-.fullScreen .fullScreenText .txt p .del{ animation-delay: 2s; }
-.fullScreen .fullScreenText .txt p .del1{ animation-delay: 2.5s; }
-.fullScreen .fullScreenText .txt p .del2 {animation-delay: 3s;}
+.fullScreen .fullScreenText .txt p .del{ animation-delay: 3s; }
+.fullScreen .fullScreenText .txt p .del1{ animation-delay: 3.5s; }
+.fullScreen .fullScreenText .txt p .del2 {animation-delay: 4s;}
 
 /* container section1,2 안 txtBox */
 .container .txtBox em {font-size: 0.9vw;}
