@@ -350,6 +350,7 @@ header h1 img {
   align-items: center;
   margin-top: 115px;
   position: relative;
+  overflow: hidden;
 }
 .mainArticle .titleBox {
   width: 33.3333%;
@@ -549,10 +550,7 @@ header h1 img {
 /* Social_article -------------------------------- */
 #social .txtMask {
   right: -3%;
-  top: 5%;
-}
-#social .followContainer {
-  transform: translateY(-150px);
+  top: 150px;
 }
 #social .circleContainer .imgCircle {
   width: 340px;
@@ -566,7 +564,7 @@ header h1 img {
 /* Governance_article -------------------------------- */
 #governance .txtMask {
   right: -43%;
-  top: 30%;
+  top: 400px;
 }
 .imgFixer {
   width: 100%;

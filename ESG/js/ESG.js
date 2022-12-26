@@ -3,7 +3,6 @@ const bgBox = document.querySelector("#bgBox");
 let clientHt = document.documentElement.clientHeight;
 const menu = document.querySelector(".container");
 
-// 스크롤 smooth
 
 //페이지 로딩 이벤트
 
@@ -196,7 +195,7 @@ window.onload = function () {
 
   addEventListener("scroll", () => {
     const topLine = articles[1].offsetTop - document.documentElement.clientHeight;
-    if (scrollY > topLine + 400) {
+    if (scrollY > topLine + 700) {
       people.classList.add("svgControl");
     }
     scrollY < topLine ? people.classList.remove("svgControl") : false;
