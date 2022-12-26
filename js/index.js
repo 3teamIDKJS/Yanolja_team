@@ -67,7 +67,7 @@ const pageLoad = () => {
   // bgLoad: 원래 이미지 커지는 함수. 생략 가능
   setTimeout(bgLoad, 1430);
   // bgMask 애니메이션 끝나고 사라지는 함수.
-  setTimeout(bgOut, 3000);
+  setTimeout(bgOut, 2000);
   // 모든 애니메이션 후 메인메뉴 나타나는 함수.
   setTimeout(menuDown, 1280);
 };

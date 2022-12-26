@@ -61,10 +61,9 @@ let prevscroll = scrollY;
 function scrolled() {
   const menuHt = menu.offsetHeight;
   // mission항목은 글자 색이 바뀌는 구간 클래스로 변경해서 사용해야함
-  const content2Ct = content2.clientHeight;
+  const content2Ct = bgBox.clientHeight;
   let nowscroll = scrollY;
   let clientHt = document.documentElement.clientHeight;
-  let scrollLc = clientHt / 3 + content2Ct;
 
   if (prevscroll < nowscroll) {
     menu.style.top = `-${menuHt}px`;
@@ -73,10 +72,10 @@ function scrolled() {
   }
   prevscroll = nowscroll;
 
-  if (scrollY > scrollLc) {
+  if (scrollY > content2Ct) {
     gnb.style.color = "#000";
     menu.style.backgroundColor = "#fff";
-  } else if (scrollY <= scrollLc) {
+  } else if (scrollY <= content2Ct) {
     gnb.style.color = "#fff";
     menu.style.backgroundColor = "transparent";
   }
@@ -88,7 +87,6 @@ menu.addEventListener("mouseenter", (e) => {
   menu.addEventListener("mouseleave", () => {
     menu.classList.remove("showMenu");
     gnb.style.overflow = "hidden";
-    menu.style.backgroundColor = "transparent";
     scrollY <= content2.clientHeight ?  menu.style.backgroundColor = "transparent" : menu.style.backgroundColor = "#fff";
   });
 });

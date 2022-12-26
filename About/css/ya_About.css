@@ -21,6 +21,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 h2 {
   font-size: 130px;
@@ -298,19 +299,18 @@ header h1 img {
 
 #banner {
   width: 100%;
-  height: 100vh;
-  background: url(../images/kv.jpg) no-repeat 50% / cover;
+  height: 115vh;
+  /* background: url(../images/kv.jpg) no-repeat 50% / cover; */
   position: relative;
   z-index: 9;
 }
-@keyframes banner {
-  0%,
-  100% {
-    background-color: #fff;
-  }
-}
 .bannerBg {
-  animation: banner 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/kv.jpg) no-repeat 50% / cover;
+  clip-path: inset(86% 0% 14% 0%);
+  transition: 1s;
 }
 
 .bgMask {
@@ -325,7 +325,7 @@ header h1 img {
   position: absolute;
   width: 100%;
   height: 100vh;
-  /* height: 115vh; */
+  height: 115vh;
   background: url(../images/kv.jpg) no-repeat 50% / cover;
   transform: scale(0.7);
   transition: 1s;
@@ -336,7 +336,7 @@ header h1 img {
   font-weight: bold;
   font-size: 44px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 90%;
   transform: translate(-95%, -50%);
 }
@@ -951,15 +951,10 @@ header h1 img {
   z-index: 999;
 } */
 
-/* footer */
-footer img {
-  vertical-align: top;
-}
-
+/* ----- footer ----- */
 footer {
-  font-family: "Yanolja", "Noto Sans KR", sans-serif;
   width: 100%;
-  padding: 0 5.208vw;
+  padding: 10.417vw 5.208vw 0;
   font-size: 0.75vw;
 }
 #footerContainer {
@@ -998,7 +993,7 @@ footer {
   position: relative;
 }
 #footerContainer #followContainer #familySite a {
-  height: 4vw;
+  height: 80px;
   border-bottom: 1px solid #000;
   display: flex;
   align-items: center;
@@ -1010,14 +1005,14 @@ footer {
   align-items: center;
   padding-left: 1vw;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 1px);
   position: absolute;
   left: 0;
   top: 0;
   background-color: #fe3478;
   transform: scaleX(0);
   transform-origin: 0;
-  transition: 0.4s cubic-bezier(0.49, 0.06, 0.1, 0.99);
+  transition: 0.4s var(--smooth);
 }
 #footerContainer #followContainer #familySite a::before {
   content: "Family site";
@@ -1025,11 +1020,11 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: calc(100%);
   position: absolute;
   z-index: 9999;
   opacity: 0;
-  transition: 0.4s cubic-bezier(0.49, 0.06, 0.1, 0.99);
+  transition: 0.4s var(--smooth);
 }
 #footerContainer #followContainer #familySite a:hover::after {
   transform: scaleX(1);
@@ -1042,14 +1037,8 @@ footer {
   transform: translateY(-50%) scale(0);
 }
 #footerContainer #followContainer #familySite a:hover + img + img {
-  animation: familySiteBtn 0.4s 0.25s cubic-bezier(0.49, 0.06, 0.1, 0.99)
-    forwards;
+  animation: familySiteBtn 0.4s 0.25s var(--smooth) forwards;
   animation-play-state: running;
-}
-@keyframes familySiteBtn {
-  100% {
-    opacity: 1;
-  }
 }
 #footerContainer #followContainer #familySite img {
   position: absolute;
@@ -1102,6 +1091,3 @@ footer {
   padding: 0;
 }
 
-main {
-  height: 400vh;
-}

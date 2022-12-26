@@ -154,11 +154,12 @@ topBtn.addEventListener("click", (e) => {
 const pageLoad = () => {
   const clipImg = document.querySelector(".clipImg");
   const bgMask = document.querySelector(".bgMask");
+  const bgBox = document.querySelector(".bannerBg")
   // menu랑 bgBox(메뉴에서 mission역할)는 메인메뉴에서도  어차피 써야되니까 전역으로 선언하세요.그냥 참고하라고 함수 안에 넣어둔 것
 
   const bgEnd = () => (bgMask.style.clipPath = "inset(0% 0% 0% 0% round 0)");
   const bgScaleUp = () => (clipImg.style.transform = "scale(1)");
-  const bgLoad = () => (mission.style.clipPath = "inset(0% 0% 0% 0%)");
+  const bgLoad = () => (bgBox.style.clipPath = "inset(0% 0% 0% 0%)");
   const bgOut = () => (bgMask.style.display = "none");
   const menuDown = () => (menu.style.top = 0);
 

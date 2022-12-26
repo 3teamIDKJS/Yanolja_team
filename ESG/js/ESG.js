@@ -63,7 +63,6 @@ function scrolled() {
   // mission항목은 글자 색이 바뀌는 구간 클래스로 변경해서 사용해야함
   const missionCt = bgBox.clientHeight;
   let nowscroll = scrollY;
-  let scrollLc = clientHt / 3 + missionCt;
 
   if (prevscroll < nowscroll) {
     menu.style.top = `-${menuHt}px`;
