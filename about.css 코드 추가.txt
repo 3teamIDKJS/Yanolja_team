@@ -1,0 +1,6 @@
+.vision.active img {
+  animation: imgAni 1s forwards linear;
+  animation-delay: 0.5s;
+}
+
+//애니메이션 딜레이 추가
