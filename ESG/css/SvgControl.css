@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* cloud animation */
+/* article1_cloud animation */
 @keyframes flowRightSlow {
   100% {
     transform: translateX(500px);
@@ -16,12 +16,54 @@
     transform: translateX(-1200px);
   }
 }
+/* article1_tree animation */
 @keyframes treePop {
   60% {
     transform: scale(1.1) rotateY(50deg);
   }
   75% {
     transform: scale(0.9) rotateY(40deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* article3 */
+@keyframes agree {
+  100% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes txtBalloon {
+  50% {
+    transform: scale(1.1);
+  } 70% {
+    transform: scale(.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes agree2 {
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+@keyframes agree3 {
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes leftPencil {
+  100% {
+    transform: rotate(15deg) translateY(-10px);
+  }
+}
+@keyframes txtBox {
+  50% {
+    transform: scale(1.1);
+  } 70% {
+    transform: scale(.9);
   }
   100% {
     transform: scale(1);
@@ -112,24 +154,9 @@
   transform-origin: 200px 150px;
   animation: agree 1s infinite alternate;
 }
-@keyframes agree {
-  100% {
-    transform: rotate(15deg);
-  }
-}
 #article3 #txtBalloon {
   transform-origin: center 100px;
   transform: scale(0);
-}
-@keyframes txtBalloon {
-  50% {
-    transform: scale(1.1);
-  } 70% {
-    transform: scale(.9);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 #article3.svgControl #txtBalloon {
   animation: txtBalloon .5s .7s forwards;
@@ -148,29 +175,14 @@
   transform-origin: 450px 320px;
   animation: agree2 1.2s infinite alternate;
 }
-@keyframes agree2 {
-  100% {
-    transform: rotate(-15deg);
-  }
-}
 #article3 #talkHead3 {
   transform-origin: 80px 500px;
   animation: agree3 2s infinite alternate;
-}
-@keyframes agree3 {
-  100% {
-    transform: rotate(30deg);
-  }
 }
 #article3 #leftPencil {
   transform-origin: 150px 600px;
   animation: leftPencil 1s infinite alternate;
   transform: rotate(20deg);
-}
-@keyframes leftPencil {
-  100% {
-    transform: rotate(15deg) translateY(-10px);
-  }
 }
 #article3 #talk3 {
   transform: translateX(-100px);
@@ -188,14 +200,4 @@
 #article3.svgControl #txtBox {
   animation: txtBalloon .5s 1.5s forwards;
   animation-play-state: running;
-}
-@keyframes txtBox {
-  50% {
-    transform: scale(1.1);
-  } 70% {
-    transform: scale(.9);
-  }
-  100% {
-    transform: scale(1);
-  }
 }

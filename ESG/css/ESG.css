@@ -372,7 +372,6 @@ header h1 img {
   margin-bottom: 100px;
   position: relative;
   transform: translateY(80px);
-  align-content: flex-end;
   transition: .5s;
 }
 .mainArticle .followContainer .imgBox {
