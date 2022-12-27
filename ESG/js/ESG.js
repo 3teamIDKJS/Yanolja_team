@@ -3,9 +3,7 @@ const bgBox = document.querySelector("#bgBox");
 let clientHt = document.documentElement.clientHeight;
 const menu = document.querySelector(".container");
 
-
 //페이지 로딩 이벤트
-
 const pageLoad = () => {
   const clipImg = document.querySelector(".clipImg");
   const bgMask = document.querySelector(".bgMask");
@@ -29,7 +27,6 @@ const pageLoad = () => {
   setTimeout(bgOut, 3000);
   setTimeout(menuDown, 1280);
 };
-
 addEventListener("DOMContentLoaded", pageLoad);
 
 // top버튼
@@ -49,40 +46,36 @@ topBtn.addEventListener("click", (e) => {
   });
 });
 
-// header gnb JavaScript
+// header #gnb JavaScript
 const gnb = document.querySelector("#gnb");
-const lis = document.querySelectorAll("#gnb li");
 
-/* menu */
-addEventListener("scroll", scrolled);
-
-let prevscroll = scrollY;
+let prevScroll = scrollY;
 function scrolled() {
   const menuHt = menu.offsetHeight;
-  // mission항목은 글자 색이 바뀌는 구간 클래스로 변경해서 사용해야함
-  const missionCt = bgBox.clientHeight;
-  let nowscroll = scrollY;
+  const bgHt = bgBox.clientHeight;
+  let nowScroll = scrollY;
 
-  if (prevscroll < nowscroll) {
+  if (prevScroll < nowScroll) {
     menu.style.top = `-${menuHt}px`;
-  } else if (prevscroll >= nowscroll) {
+  } else if (prevScroll >= nowScroll) {
     menu.style.top = 0;
   }
-  prevscroll = nowscroll;
+  prevScroll = nowScroll;
 
-  if (scrollY > missionCt) {
+  if (scrollY > bgHt) {
     gnb.style.color = "#000";
     menu.style.backgroundColor = "#fff";
-  } else if (scrollY <= missionCt) {
+  } else if (scrollY <= bgHt) {
     gnb.style.color = "#fff";
     menu.style.backgroundColor = "transparent";
   }
 }
-
+addEventListener("scroll", scrolled);
 menu.addEventListener("mouseenter", (e) => {
   menu.classList.add("showMenu");
   gnb.style.overflow = "visible";
   menu.style.backgroundColor = "#fff";
+
   menu.addEventListener("mouseleave", () => {
     menu.classList.remove("showMenu");
     gnb.style.overflow = "hidden";
@@ -92,7 +85,7 @@ menu.addEventListener("mouseenter", (e) => {
   });
 });
 
-// snb JavaScript
+// main .snb JavaScript
 const snb = document.querySelector(".snb");
 const snbLists = document.querySelectorAll(".snb li");
 const snbArrow = document.querySelector(".snb .downArrow");
@@ -103,13 +96,10 @@ snbLists[0].addEventListener("mouseenter", (e) => {
     snbArrow.classList.remove("active");
   });
 });
-
 snbLists[0].addEventListener("click", (e) => {
   e.preventDefault();
   snb.classList.toggle("active");
 });
-
-// main
 
 // directBtn 이벤트
 const btnMasks = document.querySelectorAll(".btnMask");
@@ -124,25 +114,16 @@ btnMasks.forEach((btn) => {
   });
 });
 
-// main 스크롤 이벤트
-
+// main 스크롤 모션
 // title slide
 const articles = document.querySelectorAll(".mainArticle");
 
 const lineOver = () => {
   articles.forEach((art) => {
     art.offsetTop - clientHt + 100 < scrollY ? art.classList.add("lineBreak") : false;
-  });
-  articles.forEach((art) => {
     art.offsetTop - clientHt + 200 < scrollY ? art.classList.add("expand") : false;
-  });
-  articles.forEach((art) => {
     art.offsetTop - clientHt + 400 < scrollY ? art.classList.add("circleLine") : false;
-  });
-  articles.forEach((art) => {
     art.offsetTop - clientHt + 750 < scrollY ? art.classList.add("subLine") : false;
-  });
-  articles.forEach((art) => {
     art.offsetTop - clientHt + 1000 < scrollY ? art.classList.add("btnLine") : false;
   });
 };
@@ -161,56 +142,25 @@ const followBox = () => {
     circle.style.top = `${Math.max(getHt, 0)}px`;
   });
 };
-
 addEventListener("scroll", followBox);
 
-// contents spread
-
-const expandCircle = () => {};
-
-addEventListener("scroll", expandCircle);
-
-// svg 제어
-
-// 나무 일러스트 애니메이션 제어
-
+// svg 제어 ----------------------------------------------
 window.onload = function () {
-  // article1 js
-  const treeSvg = document.getElementById("treeSvg");
-  const treeSvgDoc = treeSvg.contentDocument;
-  const frontTree = treeSvgDoc.getElementById("frontTree");
-
-  addEventListener("scroll", () => {
-    const topLine = articles[0].offsetTop - document.documentElement.clientHeight;
-    if (scrollY > topLine + 700) {
-      frontTree.classList.add("svgControl");
-    }
-    scrollY < topLine ? frontTree.classList.remove("svgControl") : false;
+  const svgObjs = document.querySelectorAll("main .imgMask object");
+  const svgDocs = [];
+  svgObjs.forEach((svg) => {
+    svgDocs.push(svg.contentDocument);
   });
 
-  // article2 js
-  const theySvg = document.getElementById("people");
-  const theySvgDoc = theySvg.contentDocument;
-  const people = theySvgDoc.getElementById("peoples");
+  const frontTree = svgDocs[0].getElementById("frontTree");
+  const people = svgDocs[1].getElementById("peoples");
+  const talking = svgDocs[2].getElementById("article3");
+  const topLine = articles[0].offsetTop - 200;
 
   addEventListener("scroll", () => {
-    const topLine = articles[1].offsetTop - document.documentElement.clientHeight;
-    if (scrollY > topLine + 700) {
-      people.classList.add("svgControl");
-    }
-    scrollY < topLine ? people.classList.remove("svgControl") : false;
-  });
+    scrollY > topLine ? frontTree.classList.add("svgControl") : false;
+    scrollY > topLine * 2 ? people.classList.add("svgControl") : false;
+    scrollY > topLine * 3 + 530 ? talking.classList.add("svgControl") : false;
 
-  // article3 js
-  const talkSvg = document.getElementById("talking");
-  const talkSvgDoc = talkSvg.contentDocument;
-  const talking = talkSvgDoc.getElementById("article3");
-
-  addEventListener("scroll", () => {
-    const topLine = articles[2].offsetTop - document.documentElement.clientHeight;
-    if (scrollY > topLine + 700) {
-      talking.classList.add("svgControl");
-    }
-    scrollY < topLine ? talking.classList.remove("svgControl") : false;
   });
 };
