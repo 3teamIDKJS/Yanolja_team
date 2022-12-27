@@ -20,22 +20,28 @@ const pageLoad = () => {
 
   menu.style.top = `-${menu.offsetHeight}px`;
 
-  setTimeout(bgEnd, 500);
-  setTimeout(bgScaleUp, 500);
-  setTimeout(bgLoad, 1430);
-  setTimeout(txtUp, 1200);
-  setTimeout(bgOut, 3000);
-  setTimeout(menuDown, 1280);
+  setTimeout(() => {
+    bgEnd();
+    bgScaleUp();
+    setTimeout(() => {
+      txtUp();
+      setTimeout(() => {
+        bgLoad();
+        menuDown();
+        setTimeout(() => {
+          bgOut();
+        }, 1250);
+      }, 250);
+    }, 700);
+  }, 500);
 };
 addEventListener("DOMContentLoaded", pageLoad);
 
 // top버튼
 function changeBtn() {
-  if (scrollY > 190) {
-    topBtn.classList.add("scrolled");
-  } else {
-    topBtn.classList.remove("scrolled");
-  }
+  scrollY > 190
+  ? topBtn.classList.add("scrolled")
+  : topBtn.classList.remove("scrolled")
 }
 addEventListener("scroll", changeBtn);
 topBtn.addEventListener("click", (e) => {
@@ -161,6 +167,5 @@ window.onload = function () {
     scrollY > topLine ? frontTree.classList.add("svgControl") : false;
     scrollY > topLine * 2 ? people.classList.add("svgControl") : false;
     scrollY > topLine * 3 + 530 ? talking.classList.add("svgControl") : false;
-
   });
 };
