@@ -15,7 +15,7 @@ const introPlay = () => {
     }, 1000)
   }, 1000);
 };
-setTimeout(introPlay, 0);
+addEventListener("DOMContentLoaded", introPlay);
 
 // introLogo ------------------------
 
