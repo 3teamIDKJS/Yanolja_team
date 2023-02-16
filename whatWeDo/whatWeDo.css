@@ -357,6 +357,7 @@ header h2 {
 #content3 {
     width: 100%;
     position: relative;
+<<<<<<< HEAD
     height: 100vh;
 }
 #content3 .stickyBox {
@@ -367,36 +368,66 @@ header h2 {
     justify-content: space-around;
 }
 #content3 .stickyBox .content3txtBox {
+=======
+}
+#content3 .sticky_box {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+#content3 .sticky_box .content3txtBox {
+>>>>>>> main
     position: absolute;
     left: 5%; top: 17%;
     z-index: 999;
 }
+<<<<<<< HEAD
 #content3 .stickyBox .content3txtBox h2 {
+=======
+#content3 .sticky_box .content3txtBox h2 {
+>>>>>>> main
     font-size: 1.875vw;
     font-weight: bold;
     width: 26.042vw;
     margin-bottom: 1.563vw;
 }
+<<<<<<< HEAD
 #content3 .stickyBox .content3txtBox p {
+=======
+#content3 .sticky_box .content3txtBox p {
+>>>>>>> main
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.146vw;
     line-height: 1.7;
 }
+<<<<<<< HEAD
 #content3 .stickyBox .content3txtBox3 .content3SNS {
+=======
+#content3 .sticky_box .content3txtBox3 .content3SNS {
+>>>>>>> main
     display: flex;
     align-items: center;
     margin-top: 1.563vw;
 }
+<<<<<<< HEAD
 #content3 .stickyBox .content3txtBox3 .content3SNS a {
     transform: translateX(-0.6vw);
     padding: 0.7vw;
 }
 #content3 .stickyBox .content3txtBox .timeTxt {
+=======
+#content3 .sticky_box .content3txtBox3 .content3SNS a {
+    transform: translateX(-0.6vw);
+    padding: 0.7vw;
+}
+#content3 .sticky_box .content3txtBox .timeTxt {
+>>>>>>> main
     position: absolute;
     transform: translateY(8%);
     transition: 0.6s;
     opacity: 0;
 }
+<<<<<<< HEAD
 #content3 .stickyBox .content3txtBox .timeTxt.time {
     opacity: 1;
     transform: translateY(0);
@@ -447,6 +478,49 @@ header h2 {
     /* width: 333px; height: 515px; */
     width: 17.344vw; height: 26.823vw;
     margin-bottom: 16vw;
+=======
+#content3 .sticky_box .content3txtBox .timeTxt.time {
+    opacity: 1;
+    transform: translateY(0);
+}
+#content3 .sticky_box .content3Scroll {
+    position: absolute;
+    left: 38%;
+    display: flex;
+    width: 300%; 
+    padding-right: 9%;
+}
+#content3 .sticky_box .content3Scroll li {
+    width: 40%;
+    height: 100vh;
+    transition: 0.5s;
+}
+#content3 .sticky_box .content3Scroll img {
+    position: absolute;
+}
+#content3 .sticky_box .content3Scroll .content3Img1 {
+    top: 60%;
+    transform: translateY(-60%);
+}
+#content3 .sticky_box .content3Scroll .content3Img2 {
+    bottom: 0;
+    transform: translateX(20%);
+}
+#content3 .sticky_box .content3Scroll .content3Img3 {
+    top: 15%; left: 35%;
+}
+#content3 .sticky_box .content3Scroll .content3txt {
+    font-size: 8.333vw;
+    position: absolute;
+    left: 35%; top: 72%;
+    z-index: 999;
+}
+#content3 .sticky_box .content3Scroll .content3Img4 {
+    bottom: 0;
+}
+#content3 .sticky_box .content3Scroll .content3Img5 {
+  transform: translateX(10%);
+>>>>>>> main
 }
 
 /********** content4 **********/

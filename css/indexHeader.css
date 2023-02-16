@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+body {
+    font-family: "Yanolja", "Noto Sans KR", sans-serif;
+    margin: 0;
+    color: #000;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  h2 {
+    font-size: 130px;
+    text-transform: capitalize;
+  }
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  /* header */
+  .header.container {
+    width: 100%;
+    height: 92px;
+    padding: 0 100px;
+    position: fixed;
+    transition: 0.25s;
+    z-index: 99999;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    padding: 25px 5px;
+  }
+  
+  header h1 a {
+    padding: 9px;
+    display: block;
+  }
+  header h1 img {
+    width: 5.6vw;
+  }
+  /* 메뉴 */
+  #gnb {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #gnb img {
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+  }
+  #gnb li {
+    padding-right: 4.5vw;
+  }
+  #gnb li a {
+    display: block;
+    padding: 9px;
+  }
+  #gnb #menuLang {
+    padding-right: 0;
+    margin-left: 90px;
+    display: flex;
+  }
+  #gnb #langKr {
+    position: relative;
+  }
+  #gnb #langKr::after {
+    content: "";
+    width: 1px;
+    height: 35%;
+    background-color: #a2a2a2;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+  #gnb #langEng {
+    color: #a2a2a2;
+  }
+  /* 서브메뉴 */
+  #gnb .subMenu {
+    position: absolute;
+    opacity: 0;
+    transition: .3s;
+  
+  }
+  #gnb .subMenu a {
+    font-size: 15.5px;
+    color: #a2a2a2;
+    transition: 0.3s;
+  }
+  #gnb .subMenu a:hover {
+    color: #000;
+    transform: translateX(5px);
+  }
+  /* 서브메뉴 show */
+  .container.showMenu {
+    background-color: #fff;
+    height: 250px;
+  }
+  .container.showMenu #gnb .subMenu {
+    color: #000;
+    opacity: 1;
+  }
+  .container.showMenu #gnb li {
+    color: #000;
+    line-height: 1.5;
+  }
+  .container.showMenu #gnb img {
+    opacity: 1;
+  }
