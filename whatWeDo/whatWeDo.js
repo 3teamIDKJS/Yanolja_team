@@ -13,10 +13,11 @@ let joinCount = document.querySelector(".count2");
 
 const content3 = document.querySelector("#content3");
 const content3Scroll = document.querySelector(".content3Scroll");
-const stickyBox = document.querySelector(".sticky_box");
+const stickyBox = document.querySelector(".stickyBox");
 const timeTxt = document.querySelectorAll('.timeTxt');
 const content3SNS = document.querySelectorAll(".content3SNS a");
-const content3ScrollLi = document.querySelectorAll("#content3 .content3Scroll li");
+const content3ScrollImg = document.querySelectorAll("#content3 .content3Scroll img");
+const content3ScrollP = document.querySelector("#content3 .content3Scroll p");
 
 const goUp = document.querySelector("#goUp");
 
@@ -61,10 +62,9 @@ let prevscroll = scrollY;
 function scrolled() {
   const menuHt = menu.offsetHeight;
   // mission항목은 글자 색이 바뀌는 구간 클래스로 변경해서 사용해야함
-  const content2Ct = content2.clientHeight;
+  const content2Ct = bgBox.clientHeight;
   let nowscroll = scrollY;
   let clientHt = document.documentElement.clientHeight;
-  let scrollLc = clientHt / 3 + content2Ct;
 
   if (prevscroll < nowscroll) {
     menu.style.top = `-${menuHt}px`;
@@ -73,10 +73,10 @@ function scrolled() {
   }
   prevscroll = nowscroll;
 
-  if (scrollY > scrollLc) {
+  if (scrollY > content2Ct) {
     gnb.style.color = "#000";
     menu.style.backgroundColor = "#fff";
-  } else if (scrollY <= scrollLc) {
+  } else if (scrollY <= content2Ct) {
     gnb.style.color = "#fff";
     menu.style.backgroundColor = "transparent";
   }
@@ -88,7 +88,6 @@ menu.addEventListener("mouseenter", (e) => {
   menu.addEventListener("mouseleave", () => {
     menu.classList.remove("showMenu");
     gnb.style.overflow = "hidden";
-    menu.style.backgroundColor = "transparent";
     scrollY <= content2.clientHeight ?  menu.style.backgroundColor = "transparent" : menu.style.backgroundColor = "#fff";
   });
 });
@@ -160,15 +159,16 @@ function widthScrolled() {
     content3Scroll.style.transform = `translateX(-${stickyBox.offsetTop}px)`;
 
     let sum = 500;
-    for (let i = 0; i < content3ScrollLi.length; i++) {
+    for (let i = 0; i < content3ScrollImg.length; i++) {
         if(stickyBox.offsetTop >= sum) {
-            content3ScrollLi[i].style.opacity = 0.1;
+            content3ScrollImg[i].style.opacity = 0.1;
+            content3ScrollP.style.opacity = 0.1;
             sum += 450;
         } else {
-            content3ScrollLi[i].style.opacity = 1;
+            content3ScrollImg[i].style.opacity = 1;
+            content3ScrollP.style.opacity = 1;
         }
     }
-
 }
 
 // top버튼

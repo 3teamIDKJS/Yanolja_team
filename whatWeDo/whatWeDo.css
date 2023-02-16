@@ -357,84 +357,96 @@ header h2 {
 #content3 {
     width: 100%;
     position: relative;
+    height: 100vh;
 }
-#content3 .sticky_box {
+#content3 .stickyBox {
     position: sticky;
     top: 0;
     height: 100vh;
+    display: flex;
+    justify-content: space-around;
 }
-#content3 .sticky_box .content3txtBox {
+#content3 .stickyBox .content3txtBox {
     position: absolute;
     left: 5%; top: 17%;
     z-index: 999;
 }
-#content3 .sticky_box .content3txtBox h2 {
+#content3 .stickyBox .content3txtBox h2 {
     font-size: 1.875vw;
     font-weight: bold;
     width: 26.042vw;
     margin-bottom: 1.563vw;
 }
-#content3 .sticky_box .content3txtBox p {
+#content3 .stickyBox .content3txtBox p {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.146vw;
     line-height: 1.7;
 }
-#content3 .sticky_box .content3txtBox3 .content3SNS {
+#content3 .stickyBox .content3txtBox3 .content3SNS {
     display: flex;
     align-items: center;
     margin-top: 1.563vw;
 }
-#content3 .sticky_box .content3txtBox3 .content3SNS a {
+#content3 .stickyBox .content3txtBox3 .content3SNS a {
     transform: translateX(-0.6vw);
     padding: 0.7vw;
 }
-#content3 .sticky_box .content3txtBox .timeTxt {
+#content3 .stickyBox .content3txtBox .timeTxt {
     position: absolute;
     transform: translateY(8%);
     transition: 0.6s;
     opacity: 0;
 }
-#content3 .sticky_box .content3txtBox .timeTxt.time {
+#content3 .stickyBox .content3txtBox .timeTxt.time {
     opacity: 1;
     transform: translateY(0);
 }
-#content3 .sticky_box .content3Scroll {
+#content3 .stickyBox .content3Scroll {
     position: absolute;
-    left: 38%;
+    /* top: 0; */
+    left: 23%;
     display: flex;
-    width: 300%; 
+    align-items: flex-end;
+    justify-content: space-evenly;
+    width: 300vw; height: 100vh;
     padding-right: 9%;
 }
-#content3 .sticky_box .content3Scroll li {
-    width: 40%;
-    height: 100vh;
+#content3 .stickyBox .content3Scroll img {
+    display: flex;
     transition: 0.5s;
 }
-#content3 .sticky_box .content3Scroll img {
-    position: absolute;
+#content3 .stickyBox .content3Scroll .content3Img1 {
+    top: 0;
+    /* width: 850px; height: 560px; */
+    width: 44.271vw; height: 29.167vw;
+    margin: 0 0 2vw 0;
 }
-#content3 .sticky_box .content3Scroll .content3Img1 {
-    top: 60%;
-    transform: translateY(-60%);
+#content3 .stickyBox .content3Scroll .content3Img2 {
+    /* width: 440px; height: 284px; */
+    width: 22.917vw; height: 14.792vw;
+    margin: 0 2vw 0 2vw;
 }
-#content3 .sticky_box .content3Scroll .content3Img2 {
-    bottom: 0;
-    transform: translateX(20%);
+#content3 .stickyBox .content3Scroll .content3Img3 {
+    /* width: 722px; height: 473px; */
+    width: 37.604vw; height: 24.635vw;
+    margin: 0 22vw 10vw 5vw;
 }
-#content3 .sticky_box .content3Scroll .content3Img3 {
-    top: 15%; left: 35%;
-}
-#content3 .sticky_box .content3Scroll .content3txt {
+#content3 .stickyBox .content3Scroll .content3txt {
     font-size: 8.333vw;
     position: absolute;
-    left: 35%; top: 72%;
+    left: 41.3%; top: 68%;
     z-index: 999;
+    transition: 0.5s;
 }
-#content3 .sticky_box .content3Scroll .content3Img4 {
-    bottom: 0;
+#content3 .stickyBox .content3Scroll .content3Img4 {
+    /* width: 810px; height: 452px; */
+    width: 42.188vw; height: 23.542vw;
+    margin: 0 1vw 0 0;
 }
-#content3 .sticky_box .content3Scroll .content3Img5 {
-  transform: translateX(10%);
+#content3 .stickyBox .content3Scroll .content3Img5 {
+    /* width: 333px; height: 515px; */
+    width: 17.344vw; height: 26.823vw;
+    margin-bottom: 16vw;
 }
 
 /********** content4 **********/
