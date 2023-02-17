@@ -13,18 +13,11 @@ let joinCount = document.querySelector(".count2");
 
 const content3 = document.querySelector("#content3");
 const content3Scroll = document.querySelector(".content3Scroll");
-<<<<<<< HEAD
 const stickyBox = document.querySelector(".stickyBox");
 const timeTxt = document.querySelectorAll('.timeTxt');
 const content3SNS = document.querySelectorAll(".content3SNS a");
 const content3ScrollImg = document.querySelectorAll("#content3 .content3Scroll img");
 const content3ScrollP = document.querySelector("#content3 .content3Scroll p");
-=======
-const stickyBox = document.querySelector(".sticky_box");
-const timeTxt = document.querySelectorAll('.timeTxt');
-const content3SNS = document.querySelectorAll(".content3SNS a");
-const content3ScrollLi = document.querySelectorAll("#content3 .content3Scroll li");
->>>>>>> main
 
 const goUp = document.querySelector("#goUp");
 
@@ -166,7 +159,6 @@ function widthScrolled() {
     content3Scroll.style.transform = `translateX(-${stickyBox.offsetTop}px)`;
 
     let sum = 500;
-<<<<<<< HEAD
     for (let i = 0; i < content3ScrollImg.length; i++) {
         if(stickyBox.offsetTop >= sum) {
             content3ScrollImg[i].style.opacity = 0.1;
@@ -177,17 +169,6 @@ function widthScrolled() {
             content3ScrollP.style.opacity = 1;
         }
     }
-=======
-    for (let i = 0; i < content3ScrollLi.length; i++) {
-        if(stickyBox.offsetTop >= sum) {
-            content3ScrollLi[i].style.opacity = 0.1;
-            sum += 450;
-        } else {
-            content3ScrollLi[i].style.opacity = 1;
-        }
-    }
-
->>>>>>> main
 }
 
 // top버튼
